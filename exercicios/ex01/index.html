@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="ex01.js"></script>
+    <title>Ex 01</title>
+</head>
+<body onload="sortear(), hideButtonForm()">
+    <div class="center-master">
+        <div class="center">
+            <h1>Contador Manual</h1>
+            <p id="contador">0</p>
+            <div class="buttons">
+                <button id="counter" onclick="clickToAdd()">Adicione 1</button>
+                <button id="reset" onclick="reset()">Reiniciar</button>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Contador Automático</h1>
+            <p id="contador-automatico">0</p>
+            <div class="buttons">
+                <button id="reset-automatic" onclick="resetar()">Resetar</button>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Cores</h1>
+            <p>Clique no botão para adicionar uma cor</p>
+            <div class="color" id="color"></div>
+            <div class="buttons">
+                <button onclick="changeColor()" id="add">Adicionar Cor</button>
+                <button onclick="backToOrigin()">Resetar</button>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Soma</h1>
+            <p>Digite os dois valores que queira somar</p>
+            <div class="inputs">
+                <p>Valor 1</p>
+                <input type="number" id="input1" value="">
+                <p>Valor 2</p>
+                <input type="number" id="input2" value="">
+            </div>
+            <p id="resultado"></p>
+            <div class="buttons">
+                <button onclick="somar()" id="add">Somar</button>
+                <button onclick="zerarValores()" id="zerarValores">Limpar Campos</button>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Interação com o Botão</h1>
+            <button onclick="buttonClick()">Clique em mim</button>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Trabalhando com dados</h1>
+            <button onclick="showMessage()" id="value">Clique para começar.</button>
+            <p id="resultadoNome"></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Média de aluno</h1>
+            <button onclick="calcMedia()">Clique para começar.</button>
+            <p><span id="result1"></span></p>
+            <p><span id="result2"></span></p>
+            <p><span id="result3"></span></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Registros de Clicks</h1>
+            <button onclick="register()" id="btn1">Ação 1</button>
+            <p id="getAction"></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Média de aluno v2.0</h1>
+            <button onclick="calcMedia2()">Clique para começar.</button>
+            <p><span id="result1.2"></span></p>
+            <p><span id="result2.2"></span></p>
+            <p><span id="result3.2"></span></p>
+            <p><span id="result4.2" class="media_baixa"></span></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Par ou Ímpar</h1>
+            <button onclick="parOuImpar()">Clique para começar.</button>
+            <p id="resultadoParagrafo">O resultado irá aparecer aqui... <span class="bold" id="resultParOuImpar"></span></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Interagindo com o Sistema</h1>
+            <button onclick="systemInfos()">Clique para começar.</button>
+            <p id="resultadoParagrafo">O resultado irá aparecer aqui...</p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Calculando a Idade</h1>
+            <button onclick="calcAge()">Iniciar</button>
+            <p id="resultadoIdade">O resultado irá aparecer aqui... <span id="bolder"></span></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Gerador de números</h1>
+            <button onclick="randomizeNumber()">Clique aqui</button>
+            <p id="numeroResultado"></p>
+            <button onclick="cleanNumber()" id="btnClean">Limpar</button>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Jogo de Advinhar</h1>
+            <section id="secaoResultado" class="secaoResultado">
+                <p>Já pensei em um valor entre 1 e 100...</p>
+            </section>
+            <button onclick="jogar()" id="btnToHide">Tente advinhar</button>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Múltiplas Ações</h1>
+            <section id="secaoResultado" class="secaoResultado">
+                <p>Clique para iniciar.</p>
+            </section>
+            <button onclick="multiplasAcoes()" id="btnToHide">Iniciar</button>
+            <p id="showCalc"></p>
+            <p id="multiplasResultado"></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Contando de 1 até 10</h1>
+            <section id="contagem">
+                <p>Aperte o botão acima para contar</p>
+            </section>
+            <button onclick="contandoAteDez()">Começe a contagem</button>
+            <p id="showContagem"></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Contando de 1 a 10 (marcando os pares)</h1>
+            <section id="contagemPar">
+                <p>Aperte o botão acima para contar</p>
+            </section>
+            <button onclick="contandoAteDezPar()">Começe a contagem</button>
+            <p id="showContagemPar"></p>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Contando de 0 até um número positivo qualquer</h1>
+            <section>
+                <p>Escolha o limite final para a contagem a partir do 0 (digite apenas números postivos)</p>
+            </section>
+            <div class="lado-a-lado">
+                <p>Valor final: <input type="number" id="escolhaForm"></p>
+                <input type="submit" value="Contar" onclick="contaForm()" class="btn-input">
+                <input type="submit" value="Limpar" onclick="resetForm()" class="btn-input" id="btn-to-reset">
+            </div>
+            <div class="contagem">
+                <p id="showContagemForm"></p>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Boas-vindas</h1>
+            <button onclick="welcome()">Inicie o desafio</button>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Antes e Depois</h1>
+            <button onclick="prevAndSuc()">Antecessor e Sucessor</button>
+        </div>
+        <div class="row"></div>
+        <div class="center">
+            <h1>Calculando o Troco</h1>
+            <button onclick="troco()">Comprar Produto</button>
+        </div>
+    </div>
+</body>
+</html>
